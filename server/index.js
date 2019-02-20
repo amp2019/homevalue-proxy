@@ -3,7 +3,7 @@ const bodyParser = require ('body-parser');
 
 const app = express();
 const port = 2998; 
-const serve = express.static('./public/dist');
+const serve = express.static('./client');
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
