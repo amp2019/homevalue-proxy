@@ -11,8 +11,6 @@
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/styled-components@4.1.3/dist/styled-components.min.js"></script>
-
-  
   <title>Xillow-Talk</title>
 </head>
 
@@ -45,32 +43,16 @@
             <img class="footer" src="https://s3-us-west-1.amazonaws.com/xillow-talk-photos/xillow-footer.png" />
         </div>
       </div>
-
-
-
-
-  <div >
-    <div id='App'></div>
-    <div id='photos'></div>
-    <div id='agents-div'></div>
-    <!-- <div id="home-value"></div> - -->
-  </div>
-<!-- <script type='text/javascript' src="bundle.js"></script> -->
 <script src="https://unpkg.com/styled-components@4.1.3/dist/styled-components.min.js"></script>
 <script src="http://localhost:3000/bundle.js"></script>
 <script src="http://localhost:6969/bundle.js"></script>
 <script src="http://localhost:3333/dist/bundle.js"></script>
-
 
 <script>
     ReactDOM.render(
       React.createElement(App),
       document.getElementById('home-value')
     );
-    // ReactDOM.render(
-    //   React.createElement(AgentContact),
-    //   document.getElementById('agents')
-    // );
     ReactDOM.render(
       React.createElement(AgentContact, { houseId: 35 }),
       document.getElementById('agents-side')
@@ -79,10 +61,6 @@
       React.createElement(PhotoCarousel, { id: 36 }, null),
       document.getElementById('photos')
     );
-    // ReactDOM.render(
-    //   React.createElement(home-value),
-    //   document.getElementById('home-value')
-    // );
   </script>
 </body>
 </html>
