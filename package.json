@@ -1,0 +1,46 @@
+{
+  "name": "john-sprague-proxy-server",
+  "version": "1.0.0",
+  "description": "Proxy service for zillow-talk",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "react-dev": "webpack -d --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zillow-talk/john-sprague-proxy-server.git"
+  },
+  "author": "John Sprague",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zillow-talk/john-sprague-proxy-server/issues"
+  },
+  "homepage": "https://github.com/zillow-talk/john-sprague-proxy-server#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "eslint": "^5.14.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  }
+}
