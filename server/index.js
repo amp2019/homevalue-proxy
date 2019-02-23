@@ -1,9 +1,10 @@
 const express = require ('express');
 const bodyParser = require ('body-parser');
+const path = require('path');
 
 const app = express();
-const port = 2998; 
-const serve = express.static('./client');
+const port = 8082; 
+const serve = express.static('../client/');
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -11,8 +12,11 @@ app.use(function(req, res, next) {
   next();
 });
 app.use(bodyParser.json());
-app.use(serve); 
+app.use('/', serve); 
 
+// app.get('/:houseId', (req, res) => {
+//   res.sendFile(path.resolve(__dirname + '/client/index.html'));
+// });
 app.listen(port, () => {
   console.log(`Listening on port ${port}`)
 });
