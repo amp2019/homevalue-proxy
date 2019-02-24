@@ -1,0 +1,37 @@
+{
+  "name": "john-sprague-proxy-server",
+  "version": "1.0.0",
+  "description": "Proxy service for zillow-talk",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js",
+    "react-dev": "webpack -d --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zillow-talk/john-sprague-proxy-server.git"
+  },
+  "author": "John Sprague",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zillow-talk/john-sprague-proxy-server/issues"
+  },
+  "homepage": "https://github.com/zillow-talk/john-sprague-proxy-server#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "eslint": "^5.14.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "webpack": "^4.29.5"
+  }
+}
