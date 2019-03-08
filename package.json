@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/zillow-talk/john-sprague-proxy-server#readme",
   "devDependencies": {
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "webpack-cli": "^3.2.3"
   },
   "dependencies": {
     "axios": "^0.18.0",
