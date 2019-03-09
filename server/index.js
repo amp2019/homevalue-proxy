@@ -1,3 +1,4 @@
+require('newrelic');
 const express = require ('express');
 const bodyParser = require ('body-parser');
 const path = require('path');
@@ -18,8 +19,8 @@ app.get('/:propertyId', (req, res) => {
 });
 
 app.get('/api/properties/:propertyId', (request, response) => {
-  console.log('HIT GET REDIRECT');
-  response.redirect('http://localhost:8081/api/properties/:propertyId');
+  console.log('HIT GET REDIRECT', request.params.propertyId);
+  response.redirect('http://localhost:8081/api/properties/' + request.params.propertyId);
 });
 
 app.post('/post', (request, response) => {
@@ -30,7 +31,7 @@ app.post('/post', (request, response) => {
 app.delete('/delete/:propertyId', (request, response) => {
   let id = request.params.propertyId;
   console.log('HIT DELETE REDIRECT', id );
-  response.redirect(303, 'http://localhost:8081/delete/:propertyId');
+  response.redirect(303, 'http://localhost:8081/delete/request.params.propertyId');
 });
 
 app.put('/update', (request, response) => {
