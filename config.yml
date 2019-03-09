@@ -5,14 +5,14 @@ config:
       arrivalRate: 100 # number of users arriving per second
   processor: "./dataGenerator.js"
 scenarios:
-  # - name: "GET request for a single house info"
-  #   weight: 80
-  #   flow:
-  #     - get:
-  #         url: "/api/properties/{{$randomNumber(1, 10000000)}}"
+  - name: "GET request for a single house info"
+    weight: 80
+    flow:
+      - get:
+          url: "/api/properties/{{$randomNumber(1, 10000000)}}"
 
   - name: "POST request to save a single house record"
-    # weight: 20
+    weight: 20
     flow:
       - function: "generateRandomData"
       - post:

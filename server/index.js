@@ -41,7 +41,7 @@ app.delete('/delete/:propertyId', (request, response) => {
 // Use middle ware to route POST And PUT requests to service. 
 // Works with Artillery
 
-const myProxy = proxy(['/post', '/update'], {
+const myProxy = proxy(['/post', '/update', '/api/properties'], {
   target: 'http://localhost:8081',
   changeOrigin: true,
   xfwd: true

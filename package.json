@@ -1,5 +1,4 @@
 {
-  "name": "john-sprague-proxy-server",
   "version": "1.0.0",
   "description": "Proxy service for zillow-talk",
   "main": "index.js",
@@ -15,7 +14,6 @@
     "type": "git",
     "url": "git+https://github.com/zillow-talk/john-sprague-proxy-server.git"
   },
-  "author": "John Sprague",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zillow-talk/john-sprague-proxy-server/issues"
