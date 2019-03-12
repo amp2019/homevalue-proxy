@@ -6,7 +6,7 @@ const express = require ('express');
 const path = require('path');
 
 const app = express();
-const port = 3004; 
+const port = 3002; 
 
 app.use('/', express.static(path.join(__dirname, '../client')));
 app.use((req, res, next) => {
@@ -22,21 +22,21 @@ app.get('/:propertyId', (req, res) => {
 
 app.get('/api/properties/:propertyId', (request, response) => {
   console.log('HIT GET REDIRECT', request.params.propertyId);
-  response.redirect('http://ec2-35-172-136-164.compute-1.amazonaws.com/api/properties/' + request.params.propertyId);
+  response.redirect('http://ec2-18-224-213-209.us-east-2.compute.amazonaws.com/api/properties/' + request.params.propertyId);
 });
 
 
 app.delete('/delete/:propertyId', (request, response) => {
   let id = request.params.propertyId;
   console.log('HIT DELETE REDIRECT', id );
-  response.redirect(303, 'http://ec2-35-172-136-164.compute-1.amazonaws.com/delete/request.params.propertyId');
+  response.redirect(303, 'http://ec2-18-224-213-209.us-east-2.compute.amazonaws.com/delete/request.params.propertyId');
 });
 
 // Use middle ware to route POST And PUT requests to service. 
 // Works with Artillery
 
 const myProxy = proxy(['/post', '/update', '/api/properties'], {
-  target: 'http://ec2-35-172-136-164.compute-1.amazonaws.com',
+  target: 'http://ec2-18-224-213-209.us-east-2.compute.amazonaws.com',
   changeOrigin: true,
   xfwd: true
 });
