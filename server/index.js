@@ -19,24 +19,37 @@ app.use((req, res, next) => {
 app.get('/:propertyId', (req, res) => {
   res.sendFile(path.resolve(__dirname + '/../client/index.html'));
 });
-
+/*
 app.get('/api/properties/:propertyId', (request, response) => {
   console.log('HIT GET REDIRECT', request.params.propertyId);
   response.redirect('http://ec2-18-224-213-209.us-east-2.compute.amazonaws.com/api/properties/' + request.params.propertyId);
 });
+*/
 
-
+/*
 app.delete('/delete/:propertyId', (request, response) => {
   let id = request.params.propertyId;
   console.log('HIT DELETE REDIRECT', id );
   response.redirect(303, 'http://ec2-18-224-213-209.us-east-2.compute.amazonaws.com/delete/request.params.propertyId');
 });
-
+*/
 // Use middle ware to route POST And PUT requests to service. 
 // Works with Artillery
 
+
+/*
 const myProxy = proxy(['/post', '/update', '/api/properties'], {
   target: 'http://ec2-18-224-213-209.us-east-2.compute.amazonaws.com',
+  changeOrigin: true,
+  xfwd: true
+});
+*/
+
+
+// LOAD BALANCER 
+
+const myProxy = proxy(['/post', '/update', '/api/properties'], {
+  target: 'http://ec2-18-225-37-192.us-east-2.compute.amazonaws.com',
   changeOrigin: true,
   xfwd: true
 });
